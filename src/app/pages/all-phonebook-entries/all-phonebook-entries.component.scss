@@ -1,0 +1,37 @@
+$tablet: 750px;
+$desktop: 768px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+////////////////////query set-up/////////////////
+.wrapper_search{
+
+    min-height: 500px;
+    margin: 1em 0;
+    padding: 0 0.5em;
+    width: 100%;
+
+    span {
+        width: 3em;
+    }
+
+    @include tablet{
+       width: 100%;
+    }
+    table{
+        @include tablet{
+            width: 100%;
+         }
+    }
+}
+span {
+    width: 3em;
+}
