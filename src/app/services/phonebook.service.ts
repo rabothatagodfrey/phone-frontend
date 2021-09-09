@@ -26,17 +26,22 @@ export class PhonebookService {
 		return this.__http.get(`${this.url}`);
 	}
 	deletePhone(id:any){
+
 		console.log(id);
-		
 		return this.__http.delete(`${this.url}/${id}`);
 	}
 	setPhoneBook(data:any){
 		this.data = data;
+		console.log(data);
+		
 	}
-	getData(){
+	getId(){
 		return this.data;
 	}
+	
 	updatePhoneBook(id:any,payload:any){
-		return this.__http.patch(`${this.url}/${id}`,payload);
+		console.log(id);
+		const updateUrl = `${this.url}/${id}`;
+		return this.__http.patch(`${updateUrl}`,payload);
 	}
 }

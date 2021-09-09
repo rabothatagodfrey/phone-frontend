@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+//ngxloader
+import { NgxUiLoaderModule } from "ngx-ui-loader";
+// toaster
+import { ToastrModule } from 'ngx-toastr';
+
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +34,10 @@ import { UpdatePhoneBookComponent } from './pages/update-phone-book/update-phone
 		ReactiveFormsModule,
 		AppRoutingModule,
 		HttpClientModule,
+		// Import NgxUiLoaderModule
+		NgxUiLoaderModule,
+		ToastrModule.forRoot(),
+		
 	],
 	providers: [],
 	bootstrap: [AppComponent]
