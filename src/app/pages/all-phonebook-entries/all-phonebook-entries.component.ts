@@ -37,7 +37,7 @@ export class AllPhonebookEntriesComponent implements OnInit {
     this.__phonebook.searchPhoneBook(this.SearchForm.value.option).subscribe((res:any)=>{
       this.phoneBookList = res;
       this.ngxService.stop();
-      this.toastr.success('Hello world!', 'Toastr fun!');
+     
       return this.phoneBookList;
     },(error)=> {
       this.ngxService.stop();
