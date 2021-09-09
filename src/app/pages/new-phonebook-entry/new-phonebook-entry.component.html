@@ -3,6 +3,7 @@
 	<!-- Default form login -->
 	<form class="text-center  p-5" [formGroup]="phonebookForm">
 		<p class="h4 mb-4">New Phonebook Entry</p>
+		<ngx-ui-loader ></ngx-ui-loader>
 
 		<input type="text" class="form-control mb-4" formControlName="name" placeholder="Name">
 		<input type="number" class="form-control mb-4" formControlName="phone" placeholder="Phone">

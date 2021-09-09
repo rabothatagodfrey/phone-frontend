@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { PhonebookService } from 'src/app/services/phonebook.service';
+import { NgxUiLoaderService } from "ngx-ui-loader"; // Import NgxUiLoaderService
+import { ToastrService } from 'ngx-toastr'; //toaster
 
 @Component({
 	selector: 'app-new-phonebook-entry',
@@ -9,7 +11,7 @@ import { PhonebookService } from 'src/app/services/phonebook.service';
 })
 export class NewPhonebookEntryComponent implements OnInit {
 
-	constructor(private __phonebook: PhonebookService) { }
+	constructor(private __phonebook: PhonebookService,private ngxService: NgxUiLoaderService,private toastr: ToastrService) { }
 
 	phonebookForm = new FormGroup({
 		name: new FormControl(''),

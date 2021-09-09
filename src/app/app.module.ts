@@ -36,6 +36,7 @@ import { UpdatePhoneBookComponent } from './pages/update-phone-book/update-phone
 		HttpClientModule,
 		// Import NgxUiLoaderModule
 		NgxUiLoaderModule,
+		BrowserAnimationsModule, // required animations module
 		ToastrModule.forRoot(),
 		
 	],

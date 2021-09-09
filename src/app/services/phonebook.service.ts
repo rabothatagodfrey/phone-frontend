@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
+import { NgxUiLoaderService } from "ngx-ui-loader"; // Import NgxUiLoaderService
+import { ToastrService } from 'ngx-toastr'; //toaster
 
 @Injectable({
 	providedIn: 'root'
@@ -7,12 +9,14 @@ import { HttpClient} from '@angular/common/http';
 export class PhonebookService {
 	//to set phone id 
 	data:any;
-	constructor(private __http: HttpClient) { }
+	constructor(private __http: HttpClient,private ngxService: NgxUiLoaderService,private toastr: ToastrService) { }
 
 	url = "http://localhost:3000/api/phonebook";
 
 	addNewPhonebook(phonebook: any){
+		this.ngxService.start();
 		this.__http.post(`${this.url}`, phonebook).subscribe((res: any) => {
+			this.ngxService.stop();
 			console.log(res);
 		}, (err: any) => {
 			console.warn (err);

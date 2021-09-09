@@ -49,9 +49,10 @@ export class AllPhonebookEntriesComponent implements OnInit {
     this.ngxService.start();
     this.__phonebook.deletePhone(id).subscribe((res:any)=>{
       console.log(res);
+      this.toastr.warning(res.message);
+      
         this.__phonebook.getPhoneBook().subscribe((res:any)=>{
           this.phoneBookList = res;
-          this.toastr.success(res.message);
           this.ngxService.stop();
         });
     })
