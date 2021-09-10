@@ -1,7 +1,5 @@
 
-<!-- <a routerLink="/phonebook-entry">Add new phonebook entry</a> -->
 
-<!-- Search form -->
 <div class="wrapper_search">
   <ngx-ui-loader ></ngx-ui-loader>
   <div class="top_bar">
@@ -27,53 +25,15 @@
           <h4 class="card-text"><img src="https://img.icons8.com/dusk/64/000000/email.png"/> Email : {{list.email}}</h4>
 
           <button class="__buttons" type="button" >
-            <!-- <i class="fas fa-times" (click)="delete(list.id)"></i> -->
             <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-delete-multimedia-kiranshastry-lineal-color-kiranshastry.png" (click)="delete(list.id)"/>
             
           </button>
           <button class="__buttons">
-            <!-- <i class="fas fa-edit" (click)="edit(list.id)"></i> -->
             <img src="https://img.icons8.com/cute-clipart/64/000000/edit.png" (click)="selected(list)" (click)="edit(list.id)"/>
-            <!-- <img src="https://img.icons8.com/bubbles/50/000000/edit.png" (click)="edit(list.id)"/> -->
           </button>
-          
-
+    
         </div>
       </div>
     </div>
-  <!-- <table class="table" >
-    <thead>
-      <tr>
-        
-        <th scope="col">Name </th>
-        <th scope="col">Number</th>
-        <th scope="col">Email</th>
-        <th scope="col">Edit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let list of phoneBookList">
-       
-        <td>{{list.name}}</td>
-        <td>{{list.phone}}</td>
-        <td>{{list.email}}</td>
-        
-        <td>
-          <div class="edit_buttons">
-            <button type="button" class="delete">
-              <i class="fas fa-times" (click)="delete(list.id)"></i>
-            </button>
-            <button type="button" class="update">
-              <i class="fas fa-edit" (click)="edit(list.id)"></i>
-            </button>
-          </div>
-          
-        </td>
-      </tr>
-      
-    </tbody>
-  </table>
-   -->
-
-
+ 
 </div>
