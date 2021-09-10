@@ -12,6 +12,7 @@ import { ToastrService } from 'ngx-toastr'; //toaster
 export class UpdatePhoneBookComponent implements OnInit {
 
   id:any;
+  selectedPhone:any;
 
   updateForm = new FormGroup({
 		phone: new FormControl(''),
@@ -22,6 +23,8 @@ export class UpdatePhoneBookComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.getListToUpdate();
+    this.setData();
     
   }
   updatePhoneBook(){
@@ -34,5 +37,16 @@ export class UpdatePhoneBookComponent implements OnInit {
       this.toastr.success(res.message);
 		});
     
+  }
+  getListToUpdate(){
+    this.selectedPhone = this.__phoneBook.getSelected();
+  }
+
+  setData()
+  {
+    this.updateForm.controls['name'].setValue(this.selectedPhone.name);
+    this.updateForm.controls['phone'].setValue(this.selectedPhone.phone);
+    this.updateForm.controls['email'].setValue(this.selectedPhone.email);
+
   }
 }

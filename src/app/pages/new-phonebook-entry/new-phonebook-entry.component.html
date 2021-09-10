@@ -1,17 +1,36 @@
-<div class="container">
+<div class="addPhone_wrapper">
 	
 	<!-- Default form login -->
-	<form class="text-center  p-5" [formGroup]="phonebookForm">
+	<div class="hearding">
 		<p class="h4 mb-4">New Phonebook Entry</p>
+		
+	</div>
+	<div class="icon">
+		<img src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/000000/external-phone-book-communication-and-media-flatart-icons-lineal-color-flatarticons.png" />
+	</div>
+	<form  [formGroup]="phonebookForm">
+		
 		<ngx-ui-loader ></ngx-ui-loader>
-
-		<input type="text" class="form-control mb-4" formControlName="name" placeholder="Name">
-		<input type="number" class="form-control mb-4" formControlName="phone" placeholder="Phone">
-		<input type="email" class="form-control mb-4" formControlName="email" placeholder="Email">
+		<div class="fields">
+			<img src="https://img.icons8.com/doodle/48/000000/employee-card--v1.png"/>
+			<input type="text" class="form-control mb-4" formControlName="name" placeholder="Name">
+		</div>
+		<div class ="fields">
+			<img src="https://img.icons8.com/color/48/000000/dialing-phone.png"/>
+			<input type="number" class="form-control mb-4" formControlName="phone" placeholder="Phone">
+		</div>
+		<div class="fields">
+			<img src="https://img.icons8.com/clouds/100/000000/email--v1.png"/>
+			<input type="email" class="form-control mb-4" formControlName="email" placeholder="Email">
+		</div>
+		
 	
 		<!-- Sign in button -->
-		<button mdbBtn color="warning" block="true" class="my-4" type="submit" (click)="submitPhoneBootEntry()">Submit</button>
-		<a routerLink="/">Back Home</a>
+		<button mdbBtn color="warning" block="true" class="my-4" type="submit" (click)="submitPhoneBootEntry()">save</button>
+		<div class="back_button">
+			<img src="https://img.icons8.com/flat-round/64/000000/back--v1.png" routerLink="/" />
+		</div>
+		
 	</form>
   <!-- Default form login -->
 </div>

@@ -16,7 +16,32 @@
     </form>
     
   </div>
-  <table class="table" >
+
+
+  <div class="row" *ngFor="let list of phoneBookList">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-title"><img src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v1.png"/> {{list.name}}</h1>
+          <h4 class="card-text"><img src="https://img.icons8.com/cute-clipart/64/000000/add-phone-number.png"/> Phone : {{list.phone}}</h4>
+          <h4 class="card-text"><img src="https://img.icons8.com/dusk/64/000000/email.png"/> Email : {{list.email}}</h4>
+
+          <button class="__buttons" type="button" >
+            <!-- <i class="fas fa-times" (click)="delete(list.id)"></i> -->
+            <img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-delete-multimedia-kiranshastry-lineal-color-kiranshastry.png" (click)="delete(list.id)"/>
+            
+          </button>
+          <button class="__buttons">
+            <!-- <i class="fas fa-edit" (click)="edit(list.id)"></i> -->
+            <img src="https://img.icons8.com/cute-clipart/64/000000/edit.png" (click)="selected(list)" (click)="edit(list.id)"/>
+            <!-- <img src="https://img.icons8.com/bubbles/50/000000/edit.png" (click)="edit(list.id)"/> -->
+          </button>
+          
+
+        </div>
+      </div>
+    </div>
+  <!-- <table class="table" >
     <thead>
       <tr>
         
@@ -48,7 +73,7 @@
       
     </tbody>
   </table>
-  
+   -->
 
 
 </div>

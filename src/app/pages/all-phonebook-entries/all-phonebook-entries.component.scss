@@ -25,8 +25,7 @@ $desktop: 768px;
         align-items: center;
         justify-content: center;
         width: 100%;
-        background-color: rgb(90, 90, 67);
-        border-bottom: black;
+       
         margin-bottom: 1em;
         form{
 
@@ -34,21 +33,33 @@ $desktop: 768px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-color: black;
+            
             border: none;
         }
 
 
     }
-    .edit_buttons{
-       
+    .card{
+        margin: .5rem;
+    }
+    img {
+        height: 2.5rem;
+    }
+    .__buttons{
+    
+       margin-left: 3.5em;
+       margin-right: 3.5em;
+       justify-content: center;
+       align-items: center;
+       border: none;
     }
     i{
         color: orange;
+        
     }
     button {
         margin-right: 1em;
-        background-color: black;
+        
         border: none;
        
     }
@@ -56,18 +67,17 @@ $desktop: 768px;
         width: 3em;
     }
    
-    @include tablet{
+    @include tablet(){
        width: 100%;
-       padding-left: 2em;
-       
-       
-    }
-    table{
-        @include tablet{
 
-            width: 100%;
-         }
     }
+    
+     @include desktop(){
+
+        width: 100%;
+        display: flex;
+     }
+    
 }
 span {
     width: 3em;

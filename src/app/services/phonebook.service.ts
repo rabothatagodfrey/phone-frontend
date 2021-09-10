@@ -9,6 +9,7 @@ import { ToastrService } from 'ngx-toastr'; //toaster
 export class PhonebookService {
 	//to set phone id 
 	data:any;
+	selectedPhone:any;
 	constructor(private __http: HttpClient,private ngxService: NgxUiLoaderService,private toastr: ToastrService) { }
 
 	url = "http://localhost:3000/api/phonebook";
@@ -18,6 +19,7 @@ export class PhonebookService {
 		this.__http.post(`${this.url}`, phonebook).subscribe((res: any) => {
 			this.ngxService.stop();
 			console.log(res);
+			this.toastr.success("Success  ","added new number" )
 		}, (err: any) => {
 			console.warn (err);
 		});
@@ -41,6 +43,12 @@ export class PhonebookService {
 	}
 	getId(){
 		return this.data;
+	}
+	setSelectedPhone(selected:any){
+		this.selectedPhone = selected;
+	}
+	getSelected(){
+		return this.selectedPhone;
 	}
 	
 	updatePhoneBook(id:any,payload:any){

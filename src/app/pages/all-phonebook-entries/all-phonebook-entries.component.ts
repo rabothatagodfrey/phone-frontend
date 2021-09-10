@@ -64,6 +64,9 @@ export class AllPhonebookEntriesComponent implements OnInit {
   add(){
     this.router.navigate(['/phonebook-entry']);
   }
+  selected(list:any){
+    this.__phonebook.setSelectedPhone(list);
+  }
   
 
 }

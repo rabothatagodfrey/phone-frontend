@@ -7,3 +7,44 @@ a{
 form{
     border: none;
 }
+form{
+    border: none;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    .fields{
+        display: flex;
+        img{
+            height: 2.5rem;
+        }
+    }
+
+}
+.hearding{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+a{
+    text-align: center;
+    color: green;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+.icon {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: min-content;
+}
+.back_button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
