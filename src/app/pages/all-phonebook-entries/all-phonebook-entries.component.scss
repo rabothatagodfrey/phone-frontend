@@ -47,10 +47,9 @@ $desktop: 768px;
     }
     .__buttons{
     
-       margin-left: 3.5em;
-       margin-right: 3.5em;
+       
        justify-content: center;
-       align-items: center;
+       float:right;
        border: none;
     }
     i{
@@ -71,11 +70,27 @@ $desktop: 768px;
        width: 100%;
 
     }
+    .card{
+        min-height: 4em;
+        min-width: 4em;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+    }
     
      @include desktop(){
 
         width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
         display: flex;
+        flex-wrap: wrap;
+        .card{
+            height: 15rem;
+            width: 40rem;
+        }
      }
     
 }
