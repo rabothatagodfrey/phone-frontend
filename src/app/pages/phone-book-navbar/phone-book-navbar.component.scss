@@ -1,0 +1,59 @@
+$tablet: 750px;
+$desktop: 768px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+header{
+    .PhoneBooknavBar__wrapper{
+        display: flex;
+        overflow: hidden;
+        
+    
+        .navLinks{
+            display: flex;
+            background-color: lightcoral;
+            border-radius: 1rem;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            margin-top: 1em;
+            justify-content: center;
+            ul{
+                margin: .5em;
+                text-align: center;
+                font-size: large;
+
+                img{
+                    height: 1.8em;
+                    margin: .5em;
+                }
+            }
+        }
+        @include desktop(){
+            margin: .5em;
+         }
+    }
+}
+.footer {
+    
+    bottom: 0;
+    background-color: lightcoral;
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    justify-content: center;
+
+    @include desktop(){
+        margin: .5em;
+     }
+}

@@ -1,0 +1,41 @@
+$tablet: 750px;
+$desktop: 768px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+footer{
+    bottom: 0;
+    position: fixed;
+    background-color: lightcoral;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem ;
+    width: 100%;
+    height: 2em;
+    margin: auto;
+    justify-content: center
+    
+}
+.footer {
+    bottom: 0;
+    display: flex;
+    background-color: lightcoral;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem ;
+    width: 90%;
+    height: 2em;
+    margin: auto;
+    justify-content: center;
+
+    @include desktop(){
+       
+     } 
+}

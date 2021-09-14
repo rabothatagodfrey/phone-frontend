@@ -19,13 +19,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { NewPhonebookEntryComponent } from './pages/new-phonebook-entry/new-phonebook-entry.component';
 import { AllPhonebookEntriesComponent } from './pages/all-phonebook-entries/all-phonebook-entries.component';
 import { UpdatePhoneBookComponent } from './pages/update-phone-book/update-phone-book.component';
+import { PhoneBookNavbarComponent } from './pages/phone-book-navbar/phone-book-navbar.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		NewPhonebookEntryComponent,
 		AllPhonebookEntriesComponent,
-  UpdatePhoneBookComponent
+  UpdatePhoneBookComponent,
+  PhoneBookNavbarComponent,
+  FooterComponent
 	],
 	imports: [
 		BrowserModule,

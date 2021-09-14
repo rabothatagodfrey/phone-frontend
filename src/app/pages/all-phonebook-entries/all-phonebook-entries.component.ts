@@ -24,13 +24,17 @@ export class AllPhonebookEntriesComponent implements OnInit {
 	})
   ngOnInit(): void {
 
+    this.load();
+  }
+
+  load(){
     this.ngxService.start();
     this.__phonebook.getPhoneBook().subscribe((res:any)=>{
       this.phoneBookList = res;
       this.ngxService.stop();
     })
-    
   }
+
   submit(){
     this.ngxService.start();
     console.log(this.SearchForm.value.option)
