@@ -12,7 +12,7 @@ export class PhonebookService {
 	selectedPhone:any;
 	constructor(private __http: HttpClient,private ngxService: NgxUiLoaderService,private toastr: ToastrService) { }
 
-	url = "http://localhost:3000/api/phonebook";
+	url = "https://godfrey-phonebook-api.herokuapp.com/api/phonebook";
 
 	addNewPhonebook(phonebook: any){
 		this.ngxService.start();
